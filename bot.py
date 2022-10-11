@@ -16,7 +16,6 @@ async def start_cmd(msg: types.Message):
 
 @dp.message_handler()
 async def s(msg: types.Message):
-
     if 'контакты' in msg.text.lower():
         await bot.send_message(msg.from_user.id, '[Наш сайт](https://divanmaster.kz/)', parse_mode='Markdown')
         await bot.send_message(msg.from_user.id, "[Наш инстаграм](https://www.instagram.com/divanmaster.kz/)", parse_mode='Markdown')
@@ -24,13 +23,18 @@ async def s(msg: types.Message):
     elif 'нас' in msg.text.lower():
         await  bot.send_message(msg.from_user.id, '*Мы молодая успешно развивающаяся компания, занимаемся поставкой\
         нестандартной фурнитуры для изготовителей мебели в РК и по СНГ*', parse_mode='Markdown')
-
     elif 'адрес' in msg.text.lower():
         await bot.send_message(msg.from_user.id, 'ул.Масанчи 23г/1, Алматы, Казахстан')
         await bot.send_message(msg.from_user.id, 'График работы: \n \
                                 *ПН - ПТ 09:00 - 17:30* \n \
                                          *СБ 10:00 - 13:00*', parse_mode='Markdown')
-        await bot.send_message(msg.from_user.id, '{:>30}'.format('hello'))
+    elif '🔍 Поиск товаров':
+        await bot.send_message(msg.from_user.id, 'Код: HC-H015-20G \n'
+                                                 'Высота 20см \n'
+                                                 'Цвет: Золотистый'
+                                                 'Состояние: среднее \n'
+                                                 'На складе: 15 штук \n'
+                                                 'Локация: 1-A1-B2-C3-02 \n')
  # keyboards
 
 kb_search = KeyboardButton('🔍 Поиск товаров')
