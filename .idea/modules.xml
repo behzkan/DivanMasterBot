@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PycharmProjects/aiogram_youtube/.idea/aiogram_youtube.iml" filepath="$PROJECT_DIR$/../PycharmProjects/aiogram_youtube/.idea/aiogram_youtube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OneDrive/Desktop/behzkan-bot/.idea/behzkan-bot.iml" filepath="$PROJECT_DIR$/../OneDrive/Desktop/behzkan-bot/.idea/behzkan-bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PycharmProjects/book/.idea/book.iml" filepath="$PROJECT_DIR$/../PycharmProjects/book/.idea/book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/divan-master.iml" filepath="$PROJECT_DIR$/.idea/divan-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OneDrive/Desktop/bot/stepik-bot/.idea/web.iml" filepath="$PROJECT_DIR$/../OneDrive/Desktop/bot/stepik-bot/.idea/web.iml" />
+    </modules>
+  </component>
+</project>

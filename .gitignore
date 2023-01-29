@@ -1,0 +1,11 @@
+.env
+
+.mypy_cache/
+.vscode/
+venv/
+__pycache__/
+img/
+
+start_bot.bat
+requirements.txt
+Procfile
