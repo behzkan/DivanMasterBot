@@ -6,5 +6,5 @@ __pycache__/
 #img/
 .idea/
 start_bot.bat
-requirements.txt
+#requirements.txt
 Procfile
