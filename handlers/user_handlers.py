@@ -1,18 +1,18 @@
 from copy import deepcopy
+from random import choice
 
 from aiogram import Dispatcher
 from aiogram.types import Message, CallbackQuery, InputMediaPhoto
 
 from database.database import user_db, user_data, products_category
 from keyboards.categories_kb import create_category_kb
+from keyboards.contacts_ikb import create_contacts_ikb
 from keyboards.main_kb import create_main_kb
 from keyboards.other_kb import create_kb
 from services.services import get_bookmarks
 from text.text import TEXT_RU
-
-
 async def cmd_start(msg: Message):
-    await msg.answer(TEXT_RU[msg.text],
+    await msg.answer(TEXT_RU['greeting'][1] + TEXT_RU[msg.text],
                      reply_markup=create_main_kb(TEXT_RU['main']))
 
     if msg.from_user.id not in user_db:
@@ -29,13 +29,16 @@ async def cmd_home(msg: Message):
 
 
 async def bookmarks(msg: Message):
-    await msg.answer(TEXT_RU['bookmark'])
+    await msg.answer(TEXT_RU['bookmark'], reply_markup=create_kb(TEXT_RU['return_home']))
     bookmarks_list = get_bookmarks(msg.from_user.id)
-    for bookmark in bookmarks_list:
-        await msg.answer(f'<pre>{bookmark}</pre>')
-
+    if bookmarks_list:
+        for bookmark in bookmarks_list:
+            await msg.answer(f'<pre>{bookmark}</pre>')
+    else:
+        await msg.answer('Нет товаров')
 async def cmd_contacts(msg: Message):
-    await msg.answer_contact('+77763030317', 'Bekzhan')
+    await msg.answer(TEXT_RU['questions'] , reply_markup=create_contacts_ikb(TEXT_RU['contacts']))
+
 
 async def cmd_location(msg: Message):
     await msg.answer(TEXT_RU['location'])

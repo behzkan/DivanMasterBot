@@ -1,11 +1,10 @@
-.env
-
+#.env
 .mypy_cache/
 .vscode/
 venv/
 __pycache__/
-img/
-.idea
+#img/
+.idea/
 start_bot.bat
 requirements.txt
 Procfile
